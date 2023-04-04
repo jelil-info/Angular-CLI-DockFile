@@ -1,0 +1,24 @@
+When I wanted to do install "pwa" through the following: "ng add @angular/pwa" 
+I encountered the following Error:
+
+"oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ ng add @angular/pwa
+Your global Angular CLI version (15.1.1) is greater than your local version (9.0.3). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+Installing packages for tooling via npm.
+Installed packages for tooling via npm.
+this.tree.readText is not a function"
+
+I solved the above Error by following the following steps:
+
+"This problem happened to me when I tried to add service workers to my app using Angular's Progressive Web App (PWA) capability. I naïvely ran ng add @angular/pwa, but my global Angular CLI version was newer than my project's Angular version. That means the @angular/pwa version was too new for my Angular project, which caused the error message that this question describes.
+
+Here's how I solved it:
+
+Run npm remove @angular/pwa.
+Check https://www.npmjs.com/package/@angular/pwa?activeTab=versions to find the correct version number for your project. The Tag field tells you the Angular version to which the package version corresponds.
+Run ng add again for the correct version. For example, run npm add @angular/pwa@0.803 for an old Angular 8 project."
+
+
+I used "ng add @angular/pwa@0.901.15" to install "PWA"
+

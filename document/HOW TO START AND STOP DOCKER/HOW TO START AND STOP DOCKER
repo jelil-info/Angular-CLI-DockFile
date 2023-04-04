@@ -1,0 +1,26 @@
+HOW TO START AND STOP DOCKER
+FIRST, OPEN first PANNEL AND ENTER "docker run -p 80:80 -p 443:443 sportsstore"
+After pannel displays the following:
+ "      HTTP Server running on port 80
+       HTTPS Server running on port 443     "
+       
+       It means DOCKER has started but when you want to stop DOCKER open the
+       second PANNEL and follow these steps:
+       
+       "  To stop the container, run the command shown in Listing 10-18.
+Listing 10-18. Listing the Containers
+
+"docker ps"
+
+You will see a list of running containers, like this (I have omitted some fields for brevity):
+
+CONTAINER ID        IMAGE        
+COMMAND                 CREATED
+ecc84f7245d6        sportsstore         "docker-entrypoint.s…"  33 seconds ago
+
+Using the value in the Container ID column, run the command shown in Listing 10-19.
+
+Listing 10-19. Stopping the Container
+
+"docker stop ecc84f7245d6"              "
+

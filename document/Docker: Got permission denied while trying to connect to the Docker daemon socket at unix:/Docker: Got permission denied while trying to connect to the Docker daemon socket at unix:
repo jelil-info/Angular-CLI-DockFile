@@ -1,0 +1,69 @@
+When entered the command "docker build . -t sportsstore  -f  Dockerfile",
+I received the following error:
+
+"   Docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock "
+
+I solved the above error by following these steps:
+
+"If you arrive to this question of stack overflow because you receive this message from docker, but you don't use jenkins, most probably the error is the same: your unprivileged user does not belong to the docker group.
+
+You can do:
+
+sudo usermod -a -G docker [user]
+Insert your user name where [user] is. [user] is oyekanmi.
+
+You can check it was successful by doing grep docker /etc/group and see something like this:
+
+docker:x:998:[user]
+in one of the lines.
+
+Then change your users group ID to docker (to avoid having to log out and log in again):
+
+newgrp docker
+
+I faced a similar issue, which is a permission issue and the cause of this issue is because the Docker daemon/server always runs as the root user, and wants you to always preface the docker command with sudo.
+
+Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user root and other users can only access it using sudo.
+
+To fix this, here's what worked for me:
+
+Firstly, check if you have a docker group already created:
+
+cat /etc/group
+If you don't find docker in the list that is displayed, then you will need to create one:
+
+sudo groupadd docker
+Next, confirm your user and your group using the command below:
+
+cat /etc/group
+Scroll through to see the group for docker. It should be of this format
+
+docker:x:140:promisepreston
+where docker is my group and promisepreston is my user(which is oyekanmi)
+
+Now we can add your user to the docker group
+
+Also add your user to the “docker” group, If you would like to use Docker as a non-root user:
+
+Copy and run the command below in your terminal exactly how it is stated without modifying it in any way, regardless of the docker image/container/command that you want to run or are trying to run or is causing the permission issue:
+
+sudo usermod -aG docker $USER
+
+After running the command above, you will need to Log out and log back in so that your group membership is re-evaluated. However, on Linux, you can also run the following command below to activate the changes to groups (Copy and run the command below in your terminal exactly how it is stated without modifying it in any way, regardless of the docker image/container/command that you want to run or are trying to run or is causing the permission issue):
+
+newgrp docker
+OR
+
+sudo systemctl restart docker        "
+
+
+
+After I resolved the above error I encountered another error when I entered "docker build . -t sportsstore  -f  Dockerfile" which is the following:
+
+"   [+] Building 0.0s (0/0)                                                         
+ERROR: invalid tag "sportsstore\u00a0\u00a0-f\u00a0\u00a0Dockerfile": invalid reference format           " 
+
+
+I discovered that the following command "docker build . -t sportsstore  -f  Dockerfile" which i copied from pdf book I am reading is not
+correct so i went to "https://github.com/oguiller/sports-store?files=1" website to copy the correct command which is the following command
+"docker build . -t sportsstore -f Dockerfile" and it corrected the error.

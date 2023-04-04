@@ -1,0 +1,25 @@
+WHEN I OPENED "SportsStore APPLICATION" THROUGH "http://localhost:4200/store"  
+AN ERROR OCCURED WHICH IS THAT THE "SportsStore APPLICATION" DO NOT SHOW THE
+DATA-SOURCE OF THE APPLICATION I THEN CHECKED GOOGLE CHROME CONSOLE WHICH SHOWED
+THE FOLLOWING ERROR:
+
+"Angular is running in the development mode. Call enableProdMode() to enable the production mode.
+:3500/products:1          Failed to load resource: net::ERR_CONNECTION_REFUSED
+core.js:5873 ERROR HttpErrorResponse
+defaultErrorLogger @ core.js:5873
+client:52 [WDS] Live Reloading enabled."
+
+I SOLVED THE ABOVE ERROR BY FOLLOWING THE INSTRUCTION OF THE BOOK I AM READING,
+WHICH IS AS THE FOLLOWING:
+
+"Preparing the Example Application
+No preparation is required for this chapter, which continues using the SportsStore project from Chapter 8.
+To start the RESTful web service, open a command prompt and run the following command in the
+SportsStore folder:
+
+"npm run json"
+
+Open a second command prompt and run the following command in the SportsStore folder to start
+the development tools and HTTP server:
+
+"ng serve --open"

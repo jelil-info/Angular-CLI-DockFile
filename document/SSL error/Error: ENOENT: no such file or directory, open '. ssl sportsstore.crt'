@@ -1,0 +1,152 @@
+When I entered the following command "node server.js", the following
+error occured:
+
+"oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+internal/fs/utils.js:332
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, open './ssl/sportsstore.crt'
+    at Object.openSync (fs.js:498:3)
+    at Object.readFileSync (fs.js:394:35)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:12:27)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+    at internal/main/run_main_module.js:17:47 {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: './ssl/sportsstore.crt'
+}"
+
+I followed the following steps to solve the above error:
+
+
+1. I configured SSL locally for my Angular application by following the following steps:
+
+"Generating an SSL Certificate:
+
+As the first step, you should generate a local Certificate Authority, and an SSL certificate for Local Development.
+
+You need a package manager to install mkcert:
+MacOS: Use Homebrew or Macports.
+Linux: Use certutil. Arch Linux only, mkcert is available on the Arch Linux repository.
+Windows: Use chocolatey.
+Install mkcert.
+Create a locally trusted CA with mkcert -install.
+Generate an SSL certificate with mkcert localhost."
+
+when I wanted to install "mkcert" by following these steps:
+
+"Linux
+On Linux, first install certutil.
+
+sudo apt install libnss3-tools
+    -or-
+sudo yum install nss-tools
+    -or-
+sudo pacman -S nss
+    -or-
+sudo zypper install mozilla-nss-tools
+Then you can install using Homebrew on Linux
+
+brew install mkcert"
+
+I encountered the following two errors when i wanted to install "brew"
+inorder to use "brew" to install "mkcert":
+
+I entered "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" to install 
+"brew" there was an error that said "curl is not command" so I therefore installed "curl" inorder to install
+"brew". After installing "brew" succefully, I tried to use "brew" to install "mkcert" by entering 
+"brew install mkcert" but another error occured which said "brew: command not found". I followed the following steps to
+clear the error:
+
+"Reinstall Homebrew
+Often when a software does not work as intended, reinstalling it from scratch may be the way to go.
+In order to properly uninstall Homebrew, we have to use its official script by opening up a Terminal window and run.
+"/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+The command above is taken from Homebrew official Github repo
+Once the uninstall process has completed, head over to Homebrew official website and carefully copy and paste the one-line installation command and paste it into Terminal.
+"/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in"
+If you’re wondering why the command includes /bin/bash instead of ruby, the answer is Homebrew installer has been rewritten in Bash recently to ensure better compatibility.
+
+Add brew to PATH
+The Homebrew installer does automatically add brew to PATH, but sometimes, the process may have been interrupted and cause "brew: command not found".
+
+Therefore, if you do not have the brew environment variable configured, the following steps must be taken:
+You should run the following command to set up your Mac’s environment variable
+
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+Depending on where brew was installed you might have to replace export PATH="/usr/local/bin:$PATH" with export PATH=$PATH:/opt/homebrew/bin
+
+Now we need to activate the changes. Type this command to activate and try drew doctor again:
+
+source .bash_profile
+Alternatively, if you already configured the environment variable, you can use this command to see if the configuration is correct:
+/usr/bin/open ~/.bash_profile"  "
+
+
+After solving the error "brew is not command". I followed the following steps inorder to use "brew" to install "mkcert" 
+and setting up "ssl" for my angular application:
+
+
+"Install mkcert by entering "brew install mkcert""
+Create a locally trusted CA with "mkcert -install".
+Generate an SSL certificate with "mkcert sportsstore" at "ssl" folder inside "ngServe" folder.  "
+I changed "sportsstore.crt" to "sportsstore.pem" and I changed "sportsstore.pem" to "sportsstore-key.pem" at 
+"server.js" folder. "
+
+
+When entered "node server.js" I encountered The following error:
+
+"  oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTPS disabled
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:80
+    at Server.setupListenHandle [as _listen2] (node:net:1716:21)
+    at listenInCluster (node:net:1781:12)
+    at Server.listen (node:net:1869:7)
+    at Function.listen (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1218:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1272:10)
+    at Module.load (node:internal/modules/cjs/loader:1081:32)
+    at Module._load (node:internal/modules/cjs/loader:922:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1760:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 80
+}   "
+
+
+
+I solved the above error through two methods but I settled for the second method because it is highly recommended:
+
+In first method I followed the following steps:
+I changed "80" to "3000" and I changed "443" to "4200"
+
+In Second method I did not change "80" to "3000" and I did not change "443" to "4200" but I followed the following steps:
+
+
+" A lot of people get stuck here, but the solution is easy. There a few options but this is the one I like. Type the following commands:
+
+> sudo apt-get install libcap2-bin 
+> sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\`` 
+Now, when you tell a Node application that you want it to run on port 80, it will not complain.
+
+EDIT: Add a space in the setcap command"
+
+
+
+

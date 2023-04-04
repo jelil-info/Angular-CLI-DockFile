@@ -1,0 +1,10 @@
+node server.js \
+    --ssl true \
+    --ssl-cert "/ssl/sportsstore.crt" \
+    --ssl-key "/ssl/sportsstore.pem"
+    ng serve —-ssl true
+    node server.js —-ssl true
+    node server.js --ssl true
+    --ssl-cert <string: defaults to "ssl/sportsstore.crt">
+    n https://localhost:4200/
+: Compiled su

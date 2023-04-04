@@ -1,0 +1,253 @@
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTPS disabled
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:80
+    at Server.setupListenHandle [as _listen2] (node:net:1716:21)
+    at listenInCluster (node:net:1781:12)
+    at Server.listen (node:net:1869:7)
+    at Function.listen (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:21:5)
+    at Module._compile (node:internal/modules/cjs/loader:1218:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1272:10)
+    at Module.load (node:internal/modules/cjs/loader:1081:32)
+    at Module._load (node:internal/modules/cjs/loader:922:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1760:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 80
+}
+
+Node.js v18.13.0
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ ng serve
+Your global Angular CLI version (15.1.1) is greater than your local version (9.0.7). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+10% building 3/3 modules 0 activeError: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:71:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:417:16)
+    at handleParseError (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:471:10)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:503:5
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:358:12
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+    at iterateNormalLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+    at iterateNormalLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:221:10)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:236:3
+    at runSyncOrAsync (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:130:11)
+    at iterateNormalLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:232:2)
+    at iterateNormalLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:221:10)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:236:3
+    at context.callback (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+10% building 3/4 modules 1 active ...Angular/ProAngular9/ngServe/src/styles.cssError: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:71:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:417:16)
+    at handleParseError (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:471:10)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:503:5
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:358:12
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+    at iterateNormalLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:186:6
+    at runSyncOrAsync (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:130:11)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:178:3
+    at loadLoader (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:295:3)
+10% building 3/5 modules 2 active ....0.0.0:0/sockjs-node&sockPath=/sockjs-nodenode:internal/crypto/hash:71
+  this[kHandle] = new _Hash(algorithm, xofLen);
+                  ^
+
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:71:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:417:16)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:452:10
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:323:13
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:203:19
+    at VirtualFileSystemDecorator.readFile (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/@ngtools/webpack/src/virtual_file_system_decorator.js:46:13)
+    at processResource (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:202:11)
+    at iteratePitchingLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:158:10)
+    at runLoaders (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/Compilation.js:739:10)
+    at /home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/webpack/lib/Compilation.js:981:14 {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Node.js v18.13.0
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ nvm use 14
+nvm use 14
+Now using node v14.21.2 (npm v6.14.17)
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ ng serve
+Your global Angular CLI version (15.1.1) is greater than your local version (9.0.7). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+
+chunk {admin-admin-module} admin-admin-module.js, admin-admin-module.js.map (admin-admin-module) 62.2 kB  [rendered]
+chunk {main} main.js, main.js.map (main) 112 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 141 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 9.01 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 1.35 MB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 3.44 MB [initial] [rendered]
+Date: 2023-03-12T21:06:43.915Z - Hash: adaecea7ada2288057ab - Time: 38375ms
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+: Compiled successfully.
+^C
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTPS disabled
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:80
+    at Server.setupListenHandle [as _listen2] (net.js:1314:21)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:21:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1358:8)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 80
+}
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:80
+    at Server.setupListenHandle [as _listen2] (net.js:1314:21)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:21:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1358:8)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 80
+}
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:80
+    at Server.setupListenHandle [as _listen2] (net.js:1314:21)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:21:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1358:8)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 80
+}
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTP Server running on port 80
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES: permission denied 0.0.0.0:443
+    at Server.setupListenHandle [as _listen2] (net.js:1314:21)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:24:41)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1358:8)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  code: 'EACCES',
+  errno: -13,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 443
+}
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTP Server running on port 80
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Object.<anonymous> (/home/oyekanmi/Documents/Angular/ProAngular9/ngServe/server.js:24:41)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1358:8)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTP Server running on port 80
+HTTPS Server running on port 443
+
+^C
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTPS disabled
+HTTP Server running on port 80
+^C
+oyekanmi@Oyekanmi-Oyetunji:~/Documents/Angular/ProAngular9/ngServe$ node server.js
+HTTP Server running on port 80
+HTTPS Server running on port 443
+

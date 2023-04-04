@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://ads.adthrive.com/builds/core/6112a2d/html/rnf.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>AdThrive</title><script>/*
+ *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+*****************************************************************************/
+(function(){function h(a,b){var c="function"===typeof Symbol&&a[Symbol.iterator];if(!c)return a;a=c.call(a);var d,e=[];try{for(;(void 0===b||0<b--)&&!(d=a.next()).done;)e.push(d.value);}catch(p){var g={error:p};}finally{try{d&&!d.done&&(c=a["return"])&&c.call(a);}finally{if(g)throw g.error;}}return e}function k(a,b,c){if(c||2===arguments.length)for(var d=0,e=b.length,g;d<e;d++)!g&&d in b||(g||(g=Array.prototype.slice.call(b,0,d)),g[d]=b[d]);return a.concat(g||Array.prototype.slice.call(b))}
+var f=function(){f=Object.assign||function(a){for(var b,c=1,d=arguments.length;c<d;c++){b=arguments[c];for(var e in b)Object.prototype.hasOwnProperty.call(b,e)&&(a[e]=b[e]);}return a};return f.apply(this,arguments)},q=function(a,b){return !!b.find(function(c){return c.rf_code===a.rf_code})},l=function(){var a=window.localStorage.getItem("mcmpfreqrec");return a&&JSON.parse(a)||[]},r=function(a){return [a.rf_code,a.partners.join(";")]},t=function(a){return f(f({},a),{counter:a.counter+1})},m=function(a){return Math.round((new Date(a.modified)-
+new Date(a.created))/864E5)>a.recency},n=function(a){var b=f,c=f({},a),d=a.counter>=a.frequency;a=!m(a);return b(c,{isMatched:d&&a})},u=function(a){return n(f(f({},a),{counter:1,isMatched:!1,created:(new Date).toISOString(),modified:(new Date).toISOString()}))},v=function(a){return function(b){return a.find(function(c){return c.rf_code===b.rf_code})?n(t(f(f({},b),{modified:(new Date).toISOString()}))):f({},b)}},w=function(a){var b=a.data.mcmpData,c=l(),d=b.filter(function(e){return !q(e,c)}).map(u);
+b=c.map(v(b)).filter(function(e){return !m(e)});window.localStorage.setItem("mcmpfreqrec",JSON.stringify(k(k([],h(b),!1),h(d),!1)));window.parent.postMessage({message:"mcmpDataResponse",mcmpData:l().filter(function(e){return e.isMatched}).map(r)},a.origin);},x=function(a){var b=document.referrer.split("/");(""===b[0]?"":"".concat(b[0],"//").concat(b[2]))===a.origin&&(b=a.data,"setMcmpData"===b.message?w(a):"deleteMcmpData"===b.message&&window.localStorage.removeItem("mcmpfreqrec"));};try{window.addEventListener("message",
+x);}catch(a){console.warn(a);}})();</script></head><body></body></html>
